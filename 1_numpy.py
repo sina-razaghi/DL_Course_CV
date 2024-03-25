@@ -186,4 +186,28 @@ c.sort(axis=1)
 print("\nsorted c axis=1 =>")
 print(c)
 
+print("\n======================")
 
+print("\nreshape a =>")
+print(np.reshape(a, (3, -1)))
+
+print("\nconcatenate a,b =>")
+print(np.concatenate((a, b)))
+
+
+a = np.array([[1, 2, 3], [4, 5, 6]])
+b = np.copy(a)
+
+b[0][0] = 10
+
+print("\nconcatenate(2D) a,b axis=0 =>")
+print(np.concatenate((a, b), axis=0))
+
+print("\nconcatenate(2D) a,b axis=1 =>")
+print(np.concatenate((a, b), axis=1))
+
+print("\nhstack a,b =>")
+print(np.hstack((a, b)))
+
+print("\nhstack a,b =>")
+print(np.vstack((a, b)))
